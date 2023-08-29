@@ -1,16 +1,23 @@
-import React from "react"
-import Cabecalho from "./components/cabecalho"
-import Footer from "./components/footer"
-import Section from "./components/section"
+import Cabecalho from "./components/Cabecalho";
+import Conteudo from "./components/Conteudo";
+import Rodape from "./components/Rodape";
+import reactLogo from "./assets/react.svg";
 
-export default function App(){
-  return(
+export default function App() {
+
+  let reactLogoAlt = "React Logo";
+
+  return (
     <>
       <div className="container">
-          
-      <Cabecalho></Cabecalho>
-      <Section></Section>
-      <Footer></Footer>
+
+        <Cabecalho/>
+
+        <img src={reactLogo} alt={reactLogoAlt} />
+
+        <Section/>
+
+        <Footer/>
 
       </div>
     </>
