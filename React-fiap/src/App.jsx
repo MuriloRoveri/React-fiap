@@ -13,11 +13,11 @@ export default function App() {
 
         <Cabecalho/>
 
-        <img src={reactLogo} alt={reactLogoAlt} />
+        {/* <img src={reactLogo} alt={reactLogoAlt} /> */}
 
-        <Section/>
+        <Conteudo reactLogoProps={reactLogo} reactLogoAltProps={reactLogoAlt} />
 
-        <Footer/>
+        <Rodape/>
 
       </div>
     </>
