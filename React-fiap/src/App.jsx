@@ -10,7 +10,7 @@ export default function App(){
 
           <section>
             <p><a href='/'>HomePage</a></p>
-                <button onClick={() => alert("hello wordl")}>Click Me</button>
+                <button onClick={() => alert("hello world")}>Click Me</button>
           </section>
           <footer>
               <p>&copy; 2021, vite.js and React</p>
