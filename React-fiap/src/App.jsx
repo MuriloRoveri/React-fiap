@@ -7,6 +7,10 @@ export default function App() {
 
   let reactLogoAlt = "React Logo";
 
+  //Lista de links redes sociais
+
+  let listaLinks =[<li>Github</li>, <li>X</li>, <li>Reddit</li> ];
+
   return (
     <>
       <div className="container">
@@ -17,7 +21,7 @@ export default function App() {
 
         <Conteudo reactLogoProps={reactLogo} reactLogoAltProps={reactLogoAlt} />
 
-        <Rodape/>
+        <Rodape listaProps={listaLinks}/>
 
       </div>
     </>
