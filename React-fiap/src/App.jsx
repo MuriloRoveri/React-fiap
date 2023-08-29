@@ -1,20 +1,17 @@
 import React from "react"
 import Cabecalho from "./components/cabecalho"
+import Footer from "./components/footer"
+import Section from "./components/section"
 
 export default function App(){
   return(
     <>
       <div className="container">
           
-          <Cabecalho></Cabecalho>
+      <Cabecalho></Cabecalho>
+      <Section></Section>
+      <Footer></Footer>
 
-          <section>
-            <p><a href='/'>HomePage</a></p>
-                <button onClick={() => alert("hello world")}>Click Me</button>
-          </section>
-          <footer>
-              <p>&copy; 2021, vite.js and React</p>
-          </footer>
       </div>
     </>
   )
