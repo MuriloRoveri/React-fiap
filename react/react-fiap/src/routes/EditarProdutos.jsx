@@ -1,5 +1,5 @@
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function EditarProdutos() {
@@ -7,6 +7,7 @@ export default function EditarProdutos() {
     //Recuperando o parâmetro ID com o HOOK useParams();
     document.title = "EDITAR PRODUTOS";
     const {id} = useParams();
+    const navigate = useNavigate();
     const [produto, setProduto] = useState({
       id:id,
       nome:'',
@@ -33,12 +34,30 @@ export default function EditarProdutos() {
 
     }
 
+    const handleSubmit = (e)=>{
+      e.preventDefault();
+
+      fetch(`http://localhost:5000/produtos/${id}`,{
+        method: "PUT",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(produto)
+      })
+      .then(response => console.log("STATUS DA REQUISIÇÃO : " + response.status))
+      .catch(error=> console.log(error));
+
+      //Redirect
+      navigate("/produtos");
+    }
+
+
   return (
     <div>
       <h1>EDITAR PRODUTOS</h1>
 
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Produto Selecionado</legend>
             <div>

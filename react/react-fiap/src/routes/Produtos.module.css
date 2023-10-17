@@ -9,6 +9,7 @@
         background-color: #ffe4c4;
 
         & th{
+            color: rgb(89, 0, 255);
             border: 2px solid #ccc;
             text-align: center;
         }
@@ -16,6 +17,7 @@
 
     & tbody{
         & tr{
+            color: rgb(0, 102, 255);
             &:hover{
                 background-color: #e2e2e2;
             }
